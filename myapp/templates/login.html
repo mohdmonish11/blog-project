@@ -13,52 +13,36 @@
 </head>
 <style>
     .st{
-    margin-top:10%;
-    margin-left:10%;
-    margin-right:30%;
+    margin-top:5%;
+    margin-left:30%;
     padding:10px;
     font-size:25px;
-    }
-    .form{
-    font-size:18px;
+
     }
 footer{
   margin-top:0;text-align:center;background-color:#505050;color:black;
 }
 .hero-image{
   margin-top:0;
-  background-image: url("{% static 'css/jrmy.jpg' %}");
+  background-image: url("{% static 'css/sky.jpg' %}");
   background-color: #cccccc;
   height:800px;
   background-position: center;
   background-size: cover;
   position: relative;
 }
-.col-sm-8{
-    background-color:#FFCCCC;
-    height:800px;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-{
-border:2px solid;
-}
+
+
 
 </style>
 <body>
+<div class="hero-image">
 <div>
       <nav class="navbar navbar-inverse" style="font-family:Arial;margin:0;">
         <div class="container-fluid">
           <div class="navbar-header">
               <a class="navbar-brand" href="/homepage"><b>Blogging</b></a>
           </div>
-          <form class="navbar-form navbar-right" action="#" >
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-            <input type="submit" class="btn btn-default" >
-            </div>
-          </form>
             <ul class="nav navbar-nav" style="float:right;font-size:18px;">
               <li><a href="/login" target="_blank"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
@@ -68,20 +52,14 @@ border:2px solid;
         </div>
       </nav>
 </div>
-<div class="row row-no-gutters">
-  <div class="col-sm-4">
-      <div class="hero-image">
-
-      </div>
-  </div>
-  <div class="col-sm-8">
+    <div>
       <form action="/check_login_details" method="POST" class="st">
           {%csrf_token%}
-            <input type="email" placeholder="Enter email id" name="email"><br>
+            <input type="email" placeholder="Enter email id" name="email" style="width:50%;"><br>
             <br><br>
-            <input type="password" placeholder="Enter Password" name="pass"><br>
+            <input type="password" placeholder="Enter Password" name="pass" style="width:50%;"><br>
             <br><br>
-            <input type="password" placeholder="Confirm Password" name="cpass"><br>
+            <input type="password" placeholder="Confirm Password" name="cpass" style="width:50%;"><br>
             <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Submit">
           <br>
@@ -91,7 +69,7 @@ border:2px solid;
           <a href="/signup" target="_blank"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up</strong></a>
           </div>
       </form>
-  </div>
+    </div>
 </div>
 <footer class="container-fluid">
   <p>Terms and Condition</p>

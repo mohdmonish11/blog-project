@@ -3,6 +3,7 @@ from myapp.models import *
 # Create your views here.
 def homepage(request):
     return render(request,'homepage.html')
+
 def login(request):
     return render(request,'login.html')
 def check_login_details(request):

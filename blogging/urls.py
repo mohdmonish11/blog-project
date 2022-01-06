@@ -36,4 +36,5 @@ urlpatterns = [
     path('forgetpass/', views.forgetpass),
     path('update_password',views.update_password),
     path('insert_article',views.insert_article),
+
 ]
